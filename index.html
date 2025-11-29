@@ -1,412 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qualityportfolio9</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: black;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-        }
-
-        #canvas {
-            display: block;
-            background: transparent;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            color: white;
-            font-size: 14px;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            color: white;
-            font-size: 14px;
-            font-family: 'Courier New', monospace;
-            text-align: center;
-        }
-
-        .footer span {
-            display: inline-block;
-            margin: 0 1px;
-            opacity: 0;
-            animation: typewriter 0.1s ease-in forwards, float 3s ease-in-out infinite 8s;
-        }
-
-        .project-title {
-            position: fixed;
-            top: 50%;
-            left: 20%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-            color: white;
-            font-size: 24px;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            text-align: center;
-            opacity: 0;
-            animation: fadeInLeft 1s ease-in forwards 4s;
-        }
-
-        .project-button {
-            position: fixed;
-            top: 50%;
-            right: 20%;
-            transform: translate(50%, -50%);
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-family: 'Arial', sans-serif;
-            text-decoration: none;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInRight 1s ease-in forwards 4s;
-        }
-
-        .project-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translate(50%, -50%) scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translate(-50%, -50%) translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translate(-50%, -50%) translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translate(50%, -50%) translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translate(50%, -50%) translateX(0);
-            }
-        }
-
-        /* Individual character delays for "qualityportfolio9" */
-        .footer span:nth-child(1) { animation-delay: 0s, 8s; }
-        .footer span:nth-child(2) { animation-delay: 0.1s, 8.1s; }
-        .footer span:nth-child(3) { animation-delay: 0.2s, 8.2s; }
-        .footer span:nth-child(4) { animation-delay: 0.3s, 8.3s; }
-        .footer span:nth-child(5) { animation-delay: 0.4s, 8.4s; }
-        .footer span:nth-child(6) { animation-delay: 0.5s, 8.5s; }
-        .footer span:nth-child(7) { animation-delay: 0.6s, 8.6s; }
-        .footer span:nth-child(8) { animation-delay: 0.7s, 8.7s; }
-        .footer span:nth-child(9) { animation-delay: 0.8s, 8.8s; }
-        .footer span:nth-child(10) { animation-delay: 0.9s, 8.9s; }
-        .footer span:nth-child(11) { animation-delay: 1.0s, 9.0s; }
-        .footer span:nth-child(12) { animation-delay: 1.1s, 9.1s; }
-        .footer span:nth-child(13) { animation-delay: 1.2s, 9.2s; }
-        .footer span:nth-child(14) { animation-delay: 1.3s, 9.3s; }
-        .footer span:nth-child(15) { animation-delay: 1.4s, 9.4s; }
-        .footer span:nth-child(16) { animation-delay: 1.5s, 9.5s; }
-        .footer span:nth-child(17) { animation-delay: 1.6s, 9.6s; }
-        
-        /* "at" appears after email ID */
-        .footer span:nth-child(18) { animation-delay: 2s, 10s; }
-        
-        /* "gmail" appears after "at" */
-        .footer span:nth-child(19) { animation-delay: 2.5s, 10.5s; }
-
-        @keyframes typewriter {
-            0% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            50% {
-                opacity: 0.5;
-                transform: scale(1.1);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(-10px);
-                opacity: 0.7;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YS – QA Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #222; }
+    header { background: #1f2937; color: white; padding: 40px 20px; text-align: center; }
+    header h1 { margin: 0; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #1f2937; border-bottom: 2px solid #ccc; padding-bottom: 8px; }
+    .project { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .project h3 { margin-top: 0; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; background: #eee; margin-top: 40px; }
+  </style>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    
-    <div class="footer">
-        <span>q</span><span>u</span><span>a</span><span>l</span><span>i</span><span>t</span><span>y</span><span>p</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span><span>9</span>
+  <header>
+    <h1>YS YU</h1>
+    <p>Quality Specialist | PMO | Web App Developer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Motivated and detail-oriented QA professional with extensive experience in software quality,
+      SDLC improvement, manual testing, defect analysis, and cross-team collaboration.
+      Passionate about learning modern testing tools and contributing to high-quality SaaS/ERP solutions.
+    </p>
+    <ul>
+      <li>Manual Testing • Test Plan • Test Case Design • Test Execution • Test Report • Regression Testing • Unit/Instegration/System testing  • Support Problem Solving </li>
+      <li>Selenium • PyTest • Swagger • Postman • Playwright • Cypress </li>
+      <li>Python • C# • SQL • JavaScript • HTML/CSS • Django</li>
+      <li>Agile : stand-ups, sprint planning, retrospectives</li>
+    </ul>
+  </section>
+  <section><section>
+    <h2>Projects </h2>
+
+    <div class="project">
+      <div class="project">
+      <h3>QPMS – Project Management System</h3>
+      <p><strong>Tech:</strong> Django, Python, SQLite3, PyTest, Selenium</p>
+      <p><strong>Link:</strong> <a href="https://qpms.pythonanywhere.com" target="_blank">Live Demo</a> | <a href="https://github.com/icnncl/portfolio/blob/main/qpms.md" target="_blank">Full Details</a></p>
+      <p><strong>Problem:</strong> Teams needed a simple internal system for project and task tracking without relying on expensive SaaS tools or working in environments with no internet access.</p>
+      <p><strong>Scope:</strong> Developed full-stack features (project creation, issues, roles, dashboards). Designed and executed end‑to‑end test scenarios including CRUD validation, user-role workflow tests, form validation, error handling, and regression suites using PyTest and Selenium.</p>
+      <p><strong>Outcome:</strong> Delivered a stable MVP with structured QA coverage, uncovering UI/logic defects early. Improved workflow clarity and demonstrated hands‑on capability in designing test cases, executing manual tests, preparing automation‑ready test structures.</p>
     </div>
-<!-- 
-    <div class="project-title">
-        Quality Project Management System
+
+    <div class="project">
+      <h3>Chantak – Nutrition Ingredient Information System</h3>
+      <p><strong>Tech:</strong> Django, Python, PostgreSQL, Bootstrap</p>
+      <p><strong>Link:</strong> <a href="https://chantak.onrender.com" target="_blank">Live Demo</a> | <a href="https://github.com/icnncl/portfolio/blob/main/chantak.md" target="_blank">Full Details</a></p>
+      <p><strong>Problem:</strong> Users lacked a unified way to search nutrition ingredients consistently.</p>
+      <p><strong>Scope:</strong> Built search, filtering, admin management, and validated data accuracy via manual UI tests.</p>
+      <p><strong>Outcome:</strong> Delivered a reliable ingredient lookup tool and strengthened structured testing.</p>
     </div>
 
-    <a href="https://busytracks.pythonanywhere.com" class="project-button" target="_blank">
-        Click Here
-    </a> -->
+    <div class="project">
+      <h3>Shineklass – Online Co-working Learning Platform</h3>
+      <p><strong>Tech:</strong> Community solution + Django, PostgreSQL</p>
+      <p><strong>Problem:</strong> Many self-learners lose motivation and consistency when studying alone, lacking peer support, accountability, and a structured space to work toward their career goals.</p>
+      <p><strong>Scope:</strong> Built and tested early-stage features that enable learners to join peer groups, participate in online co-working sessions, track learning progress, and stay focused through shared accountability. I am adding features to give users better information about their learning subjects.</p>
+      <p><strong>Outcome:</strong> Tested community features and event sessions, validated forms and workflows, and began implementing functions designed to provide learners with more information about their subject areas.</p>
+    </div>
+  </section>
 
-    <script>
-        const canvas = document.getElementById('canvas');
-        const ctx = canvas.getContext('2d');
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Testing:</strong> Manual Testing, Regression testing, Unit/Integration/System Testing, Defects Reporting, Test Documentation</li>
+      <li><strong>Tools:</strong> Selenium, PyTest, Playwright, Cypress, Postman, Swagger, git, Jira, Mantis</li>
+      <li><strong>Coding:</strong> Python, SQL, JavaScript, C#, HTML/CSS</li>
+      <li><strong>Processes:</strong> Agile, SDLC, CMMI, ISO 9001, ISO 15504, Six Sigma, ITIL</li>
+    </ul>
+  </section>
 
-        // Set canvas size
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+  <section>
+    <h2>Contact</h2>
+    <p>Email: qualityportfolio9 at g mail</p>
+    <p>GitHub: <a href="https://github.com/icnncl" target="_blank">github.com/icnncl</a></p>
+  </section>
 
-        // Animation state
-        let animationId;
-        let isPlaying = true;
-        let currentAnimation = 0;
-
-        // Set an extremely slow speed
-        let speed = 0.000001; // Try 1e-6 for slower effect
-        let particleCount = 10;
-        let particleColor = '#ffffff';
-
-        // Particle class
-        class Particle {
-            constructor(x, y) {
-                this.x = x;
-                this.y = y;
-                this.vx = (Math.random() - 0.5) * 2;
-                this.vy = (Math.random() - 0.5) * 2;
-                this.size = Math.random() * 3 + 1;
-                this.life = 1;
-                this.decay = Math.random() * 0.02 + 0.005;
-            }
-
-            update() {
-                this.x += this.vx * speed;
-                this.y += this.vy * speed;
-                this.life -= this.decay;
-                
-                // Bounce off edges
-                if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-                if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
-            }
-
-            draw() {
-                ctx.save();
-                ctx.globalAlpha = this.life;
-                ctx.fillStyle = particleColor;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.restore();
-            }
-        }
-
-        // Wave class
-        class Wave {
-            constructor() {
-                this.points = [];
-                this.time = 0;
-                this.amplitude = 50;
-                this.frequency = 0.02;
-                this.speed = 0.05;
-            }
-
-            update() {
-                this.time += this.speed * speed;
-                this.points = [];
-                
-                for (let x = 0; x < canvas.width; x += 5) {
-                    const y = canvas.height / 2 + 
-                             Math.sin(x * this.frequency + this.time) * this.amplitude +
-                             Math.sin(x * this.frequency * 2 + this.time * 1.5) * this.amplitude * 0.5;
-                    this.points.push({ x, y });
-                }
-            }
-
-            draw() {
-                ctx.strokeStyle = particleColor;
-                ctx.lineWidth = 3;
-                ctx.beginPath();
-                ctx.moveTo(this.points[0].x, this.points[0].y);
-                
-                for (let i = 1; i < this.points.length; i++) {
-                    ctx.lineTo(this.points[i].x, this.points[i].y);
-                }
-                
-                ctx.stroke();
-            }
-        }
-
-        // Spiral class
-        class Spiral {
-            constructor() {
-                this.angle = 0;
-                this.radius = 0;
-                this.maxRadius = Math.min(canvas.width, canvas.height) / 2;
-                this.centerX = canvas.width / 2;
-                this.centerY = canvas.height / 2;
-            }
-
-            update() {
-                this.angle += 0.05 * speed;
-                this.radius += 0.5 * speed;
-                
-                if (this.radius > this.maxRadius) {
-                    this.radius = 0;
-                }
-            }
-
-            draw() {
-                ctx.strokeStyle = particleColor;
-                ctx.lineWidth = 2;
-                ctx.beginPath();
-                
-                for (let i = 0; i < 100; i++) {
-                    const x = this.centerX + Math.cos(this.angle + i * 0.1) * (this.radius + i * 2);
-                    const y = this.centerY + Math.sin(this.angle + i * 0.1) * (this.radius + i * 2);
-                    
-                    if (i === 0) {
-                        ctx.moveTo(x, y);
-                    } else {
-                        ctx.lineTo(x, y);
-                    }
-                }
-                
-                ctx.stroke();
-            }
-        }
-
-        // Create animation objects
-        let particles = [];
-        let wave = new Wave();
-        let spiral = new Spiral();
-
-        // Initialize particles
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle(
-                    Math.random() * canvas.width,
-                    Math.random() * canvas.height
-                ));
-            }
-        }
-
-        // Animation functions
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach((particle, index) => {
-                particle.update();
-                particle.draw();
-                
-                if (particle.life <= 0) {
-                    particles[index] = new Particle(
-                        Math.random() * canvas.width,
-                        Math.random() * canvas.height
-                    );
-                }
-            });
-            
-            // Draw connections between nearby particles
-            particles.forEach((p1, i) => {
-                particles.slice(i + 1).forEach(p2 => {
-                    const distance = Math.sqrt(
-                        Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)
-                    );
-                    
-                    if (distance < 100) {
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * (1 - distance / 100)})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(p1.x, p1.y);
-                        ctx.lineTo(p2.x, p2.y);
-                        ctx.stroke();
-                    }
-                });
-            });
-        }
-
-        function animateWave() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            wave.update();
-            wave.draw();
-        }
-
-        function animateSpiral() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            spiral.update();
-            spiral.draw();
-        }
-
-        // Draw function that handles the animation based on currentAnimation value
-        function draw(animationValue) {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Use animationValue to create smooth transitions between different effects
-            const normalizedValue = animationValue % 3; // Cycle through 3 animations
-            
-            if (normalizedValue < 1) {
-                // Particle animation
-                animateParticles();
-            } else if (normalizedValue < 2) {
-                // Wave animation
-                animateWave();
-            } else {
-                // Spiral animation
-                animateSpiral();
-            }
-        }
-
-        // Main animation loop
-        function animate() {
-            if (!isPlaying) return;
-
-            currentAnimation += speed;
-
-            // example usage in drawing logic
-            draw(currentAnimation);
-
-            animationId = requestAnimationFrame(animate);
-        }
-
-        // Initialize and start animation
-        initParticles();
-        animate();
-    </script>
+  <footer>
+    <p>© 2025 qualityportfolio9</p>
+  </footer>
 </body>
-</html> 
+</html>
